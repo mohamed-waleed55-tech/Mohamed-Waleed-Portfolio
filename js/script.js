@@ -98,39 +98,51 @@ document.querySelectorAll('.reveal').forEach(el => {
 /* ==================== PROJECTS DATA ==================== */
 const projectsData = [
   {
-    title: 'ERP System',
-    description: 'Enterprise Resource Planning mobile application with offline-first architecture, complex data synchronization, and real-time API integration.',
-    technologies: ['Flutter', 'Clean Architecture', 'GetX', 'Firebase', 'Retrofit'],
+    title: 'Eventra',
+    emoji: '🎉',
+    description: 'Event management platform for creating, discovering, and attending events. Features real-time notifications, event search, ticket booking, and social integration with offline-first capabilities.',
+    technologies: ['Flutter', 'Clean Architecture', 'GetX', 'Firebase', 'Hive', 'Retrofit'],
+    highlights: ['Real-time Event Updates', 'Offline Support', 'Payment Integration', 'Social Features'],
     link: '#'
   },
   {
-    title: 'E-Commerce App',
-    description: 'Full-featured e-commerce platform with product catalog, shopping cart, payment integration, and order tracking capabilities.',
-    technologies: ['Flutter', 'Dart', 'GetX', 'REST API', 'Firebase'],
-    link: '#'
-  },
-  {
-    title: 'Task Management',
-    description: 'Collaborative task management application with real-time synchronization, offline support, and team collaboration features.',
-    technologies: ['Flutter', 'BLoC', 'Hive', 'WebSockets', 'MVVM'],
-    link: '#'
-  },
-  {
-    title: 'Social Media App',
-    description: 'Social networking platform with feed, user profiles, messaging, and media sharing built with modern architecture patterns.',
-    technologies: ['Flutter', 'Riverpod', 'Firebase', 'Cloud Storage', 'Authentication'],
-    link: '#'
-  },
-  {
-    title: 'Health Tracking',
-    description: 'Health and fitness tracking application with data visualization, workout planning, and health metrics monitoring.',
-    technologies: ['Flutter', 'Provider', 'Firebase', 'Charts', 'Notifications'],
+    title: 'ClickCart',
+    emoji: '🛒',
+    description: 'Full-featured e-commerce platform with product catalog, advanced filtering, shopping cart management, secure payment integration, order tracking, and seller dashboard with intuitive UI/UX.',
+    technologies: ['Flutter', 'MVVM', 'GetX', 'REST API', 'Firebase', 'Stripe', 'Dio'],
+    highlights: ['Product Management', 'Secure Payments', 'Order Tracking', 'Seller Dashboard'],
     link: '#'
   },
   {
     title: 'AI Chat Assistant',
-    description: 'AI-powered chat application integrated with Gemini API for intelligent conversations and smart recommendations.',
-    technologies: ['Flutter', 'Gemini API', 'GetX', 'Firebase', 'Real-time DB'],
+    emoji: '🤖',
+    description: 'Intelligent chat application powered by Google Gemini API. Features natural language processing, context-aware conversations, smart recommendations, and multi-turn dialog support.',
+    technologies: ['Flutter', 'Gemini API', 'GetX', 'Firebase', 'BLoC', 'Dart'],
+    highlights: ['AI Conversations', 'Context Aware', 'Real-time Response', 'Chat History'],
+    link: '#'
+  },
+  {
+    title: 'Task Management System',
+    emoji: '✅',
+    description: 'Collaborative task management application with real-time synchronization, team workspaces, task dependencies, progress tracking, and comprehensive notifications system.',
+    technologies: ['Flutter', 'BLoC/Cubit', 'Hive', 'WebSockets', 'MVVM', 'Riverpod'],
+    highlights: ['Team Collaboration', 'Real-time Sync', 'Task Dependencies', 'Progress Tracking'],
+    link: '#'
+  },
+  {
+    title: 'Health & Fitness Tracker',
+    emoji: '💪',
+    description: 'Comprehensive health tracking application with workout planning, nutrition monitoring, progress visualization, achievements system, and health metrics analysis.',
+    technologies: ['Flutter', 'Provider', 'Firebase', 'Charts', 'Notifications', 'Local Database'],
+    highlights: ['Workout Plans', 'Progress Charts', 'Health Metrics', 'Social Sharing'],
+    link: '#'
+  },
+  {
+    title: 'Social Media Platform',
+    emoji: '👥',
+    description: 'Social networking platform with user profiles, feed system, messaging, media sharing, follow/unfollow, notifications, and community features built with scalable architecture.',
+    technologies: ['Flutter', 'Riverpod', 'Firebase', 'Cloud Storage', 'Authentication', 'Firestore'],
+    highlights: ['User Profiles', 'Real-time Feed', 'Direct Messaging', 'Media Sharing'],
     link: '#'
   }
 ];
@@ -142,10 +154,13 @@ function renderProjects() {
 
   const projectsHTML = projectsData.map(project => `
     <div class="project-card reveal">
-      <div class="project-image">🚀</div>
+      <div class="project-image">${project.emoji}</div>
       <div class="project-content">
         <h3 class="project-title">${project.title}</h3>
         <p class="project-desc">${project.description}</p>
+        <div class="project-highlights">
+          ${project.highlights.map(highlight => `<span class="highlight-badge">✨ ${highlight}</span>`).join('')}
+        </div>
         <div class="project-tech">
           ${project.technologies.map(tech => `<span class="tech-badge">${tech}</span>`).join('')}
         </div>
@@ -349,6 +364,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+/* ==================== SCROLL ANIMATIONS FOR ELEMENTS ==================== */
+const scrollElements = document.querySelectorAll('.reveal');
+const elementInView = (el, dividend = 1) => {
+  const elementTop = el.getBoundingClientRect().top;
+  return (
+    elementTop <=
+    (window.innerHeight || document.documentElement.clientHeight) / dividend
+  );
+};
+
+const displayScrollElements = () => {
+  scrollElements.forEach((element) => {
+    if (elementInView(element, 1.25)) {
+      element.classList.add('scrolled');
+    }
+  });
+};
+
+window.addEventListener('scroll', () => {
+  displayScrollElements();
+});
+
 /* ==================== CONSOLE MESSAGE ==================== */
 console.log(
   '%c🚀 Welcome to Mohamed Waleed\'s Portfolio!',
@@ -357,4 +394,8 @@ console.log(
 console.log(
   '%cSoftware Engineer | Flutter Developer | Architecture Enthusiast',
   'font-size: 14px; color: #00b894;'
+);
+console.log(
+  '%cFeatures: Eventra | ClickCart | AI Chat Assistant | Clean Architecture',
+  'font-size: 12px; color: #a29bfe;'
 );
