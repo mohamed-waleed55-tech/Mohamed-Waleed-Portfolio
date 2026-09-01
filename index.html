@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Waleed — Software Engineer & Flutter Developer</title>
+    <meta name="description"
+        content="Software Engineer specializing in Flutter & mobile application development. I build reliable mobile applications that turn ideas into production-ready products.">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Mohamed Waleed — Software Engineer">
+    <meta property="og:description"
+        content="I build reliable mobile applications that turn ideas into production-ready products.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts: Inter for a modern, professional look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=2">
+</head>
+
+<body class="theme-dark">
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand">Mohamed Waleed</a>
+            <button class="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav-links">
+                <a href="#work">Work</a>
+                <a href="#engineering">Engineering</a>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+                <button class="theme-toggle magnetic" aria-label="Toggle Theme" id="theme-toggle">
+                    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+        <div class="scroll-progress" id="scroll-progress"></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content reveal">
+                <div class="hero-status">
+                    <span class="status-dot"></span>
+                    <span>Software Engineer | Flutter • Mobile • Architecture</span>
+                </div>
+                
+                <!-- Mobile only visual -->
+                <div class="hero-visual mobile-visual">
+                    <div class="hero-visual-frame glow-effect">
+                        <img src="assets/images/profile.jpg" alt="Mohamed Waleed" class="hero-profile-img">
+                    </div>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-main">Software Engineer</span>
+                    <span class="title-sub">& Flutter Developer</span>
+                </h1>
+                <p class="hero-desc">
+                    I build reliable mobile applications that turn ideas into production-ready products.
+                </p>
+                <div class="hero-actions">
+                    <a href="#work" class="btn btn-primary magnetic">View My Work</a>
+                    <a href="assets/cv/Mohamed_Waleed_CV.pdf" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-secondary magnetic">Download CV</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/mohamed-waleed55-tech" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub">GitHub</a>
+                    <a href="https://linkedin.com/in/mohamed-waleed-87aa151bb" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn">LinkedIn</a>
+                </div>
+            </div>
+            <div class="hero-visual desktop-visual reveal reveal-delay">
+                <div class="hero-visual-frame glow-effect">
+                    <img src="assets/images/profile.jpg" alt="Mohamed Waleed" class="hero-profile-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected Work -->
+    <section class="work" id="work">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-index">01 / SELECTED WORK</span>
+                <h2 class="section-title">Selected Work</h2>
+                <p class="section-subtitle">Real-world applications built for scalability and performance.</p>
+            </div>
+
+            <div id="projects-container">
+                <!-- Projects will be injected here by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineering -->
+    <section class="engineering" id="engineering">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-index">02 / ENGINEERING</span>
+                <h2 class="section-title">Engineering</h2>
+                <p class="section-subtitle">Systems, architectures, and technologies I use to build scalable products.
+                </p>
+            </div>
+
+            <div class="engineering-grid-container reveal">
+                <!-- Mobile Development -->
+                <div class="eng-card">
+                    <h3 class="eng-card-title">Mobile Development</h3>
+                    <div class="eng-chips">
+                        <span>Flutter</span>
+                        <span>Dart</span>
+                        <span>Native Android</span>
+                        <span>Kotlin</span>
+                        <span>Responsive UI</span>
+                    </div>
+                </div>
+
+                <!-- Architecture -->
+                <div class="eng-card">
+                    <h3 class="eng-card-title">Architecture & Engineering</h3>
+                    <div class="eng-chips">
+                        <span>Clean Architecture</span>
+                        <span>MVVM</span>
+                        <span>MVC</span>
+                        <span>SOLID</span>
+                        <span>Design Patterns</span>
+                        <span>Repository Pattern</span>
+                    </div>
+                </div>
+
+                <!-- State Management -->
+                <div class="eng-card">
+                    <h3 class="eng-card-title">State Management & DI</h3>
+                    <div class="eng-chips">
+                        <span>GetX</span>
+                        <span>BLoC/Cubit</span>
+                        <span>Riverpod</span>
+                        <span>Provider</span>
+                        <span>Get_it</span>
+                        <span>Injectable</span>
+                    </div>
+                </div>
+
+                <!-- Backend & APIs -->
+                <div class="eng-card">
+                    <h3 class="eng-card-title">Backend & Data</h3>
+                    <div class="eng-chips">
+                        <span>RESTful APIs</span>
+                        <span>WebSockets</span>
+                        <span>Firebase</span>
+                        <span>SQFlite</span>
+                        <span>Hive</span>
+                        <span>Offline Synchronization</span>
+                        <span>Retrofit/Dio</span>
+                    </div>
+                </div>
+
+                <!-- AI & Productivity -->
+                <div class="eng-card">
+                    <h3 class="eng-card-title">AI & Productivity</h3>
+                    <div class="eng-chips">
+                        <span>Gemini API</span>
+                        <span>AI Integration</span>
+                        <span>Prompt Engineering</span>
+                        <span>AI Agents</span>
+                        <span>LLM Integration</span>
+                    </div>
+                </div>
+
+                <!-- DevOps & Core -->
+                <div class="eng-card">
+                    <h3 class="eng-card-title">Core & Delivery</h3>
+                    <div class="eng-chips">
+                        <span>OOP</span>
+                        <span>Data Structures</span>
+                        <span>Algorithms</span>
+                        <span>CI/CD</span>
+                        <span>Flavors</span>
+                        <span>Shorebird</span>
+                        <span>Crashlytics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-index">03 / ABOUT</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+
+            <div class="about-content reveal">
+                <p class="about-text">
+                    I’m a Software Engineer specializing in Flutter with a strong foundation in software engineering
+                    principles including Clean Architecture, SOLID, Design Patterns, data structures, algorithms, and
+                    object-oriented programming.
+                </p>
+                <p class="about-text">
+                    Passionate about solving complex engineering problems, I focus on building offline-first
+                    applications, integrating REST APIs and Firebase services, and applying modern software development
+                    practices to deliver reliable, high-performance production-ready solutions.
+                </p>
+
+                <div class="focus-list">
+                    <h4>What I focus on:</h4>
+                    <ul>
+                        <li>Building production-ready mobile applications</li>
+                        <li>Maintainable Clean Architecture & MVVM</li>
+                        <li>Robust API integration & offline synchronization</li>
+                        <li>Real-world product development and problem solving</li>
+                        <li>Continuous improvement of software quality</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="two-col-layout">
+                <!-- Experience -->
+                <div class="col-experience reveal">
+                    <div class="section-header">
+                        <span class="section-index">04 / EXPERIENCE</span>
+                        <h2 class="section-title">Experience</h2>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <h3 class="timeline-role">Kotlin Developer Intern</h3>
+                            <h4 class="timeline-company">Information Technology Institute (ITI), Egypt</h4>
+                            <span class="timeline-date">2023</span>
+                            <ul class="timeline-desc">
+                                <li>Authored Android application services using native Kotlin development structures
+                                    under a strict MVVM layout alongside Room relational databases.</li>
+                                <li>Implemented asynchronous tasks safely using Kotlin Coroutines to maintain 60FPS
+                                    thread rendering operations.</li>
+                            </ul>
+                            <div class="timeline-tech">Kotlin, Native Android, MVVM, Room, Coroutines</div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <h3 class="timeline-role">Java Developer Intern</h3>
+                            <h4 class="timeline-company">Information Technology Institute (ITI), Egypt</h4>
+                            <span class="timeline-date">2022</span>
+                            <ul class="timeline-desc">
+                                <li>Solidified OOP theory, multithreading control setups, and core system architectures
+                                    inside clean standalone Java environments.</li>
+                                <li>Refactored legacy code blocks to strictly comply with SOLID principles to minimize
+                                    technical debt and elevate maintainability metrics.</li>
+                            </ul>
+                            <div class="timeline-tech">Java, OOP, SOLID Principles, Multithreading</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="col-education reveal reveal-delay">
+                    <div class="section-header">
+                        <span class="section-index">05 / EDUCATION</span>
+                        <h2 class="section-title">Education</h2>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <h3 class="timeline-role">Bachelor of Engineering in Computer and Systems Engineering</h3>
+                            <h4 class="timeline-company">Helwan University, Cairo, Egypt</h4>
+                            <span class="timeline-date">2019 – 2024 (Grade: Good)</span>
+                            <ul class="timeline-desc">
+                                <li><strong>Key Coursework:</strong> Advanced Data Structures, Analysis of Algorithms,
+                                    OOP, Database Management Systems, Operating Systems Architecture.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-index">06 / CONTACT</span>
+                <h2 class="section-title">Let's build something.</h2>
+                <p class="section-subtitle">Have a role, product, or engineering problem in mind?</p>
+            </div>
+
+            <div class="contact-actions reveal">
+                <a href="mailto:Mohamedwaleed200155@gmail.com" class="btn btn-primary magnetic">Contact Me</a>
+                <a href="https://wa.me/201131243723" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-outline magnetic">WhatsApp</a>
+                <a href="https://linkedin.com/in/mohamed-waleed-87aa151bb" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-outline magnetic">LinkedIn</a>
+                <a href="https://github.com/mohamed-waleed55-tech" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-outline magnetic">GitHub</a>
+            </div>
+            <div class="contact-secondary reveal">
+                <span>Email: Mohamedwaleed200155@gmail.com</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <span>Mohamed_Waleed</span>
+                <span class="footer-subtitle">Software Engineer & Flutter Developer</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/mohamed-waleed55-tech" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://linkedin.com/in/mohamed-waleed-87aa151bb" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a>
+                <a href="mailto:Mohamedwaleed200155@gmail.com">Email</a>
+            </div>
+            <div class="footer-copy">
+                &copy; <span id="current-year"></span> Mohamed_Waleed
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal Placeholder -->
+    <div class="video-modal" id="video-modal" aria-modal="true" role="dialog">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close" aria-label="Close video">×</button>
+            <div class="video-container" id="video-container">
+                <!-- Video injected dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
